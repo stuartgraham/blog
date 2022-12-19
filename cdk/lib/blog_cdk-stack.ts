@@ -19,8 +19,6 @@ export class BlogCdkStack extends cdk.Stack {
 
     // Lambda
 
-    // Test
-
 
   }
 }
