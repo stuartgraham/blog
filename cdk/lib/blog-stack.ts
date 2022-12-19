@@ -37,14 +37,31 @@ export class BlogStack extends cdk.Stack {
     });
 
     // IAM Role for Lambda Edge
-    const lambdaEdgePolicy = new iam.PolicyStatement({
-      actions: [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-      ],
-      resources: ['arn:aws:logs:*:*:*'],
+
+
+    // Instance Role
+    const lambdaEdgeRole = new iam.Role(this, 'LambdaEdgeRole', {
+      assumedBy: new iam.CompositePrincipal(
+        new iam.ServicePrincipal('edgelambda.amazonaws.com'),
+        new iam.ServicePrincipal('lambda.amazonaws.com')
+        )
     });
+
+    const lambdaEdgePolicy = new iam.Policy(this, 'lambdaEdgePolicy', {
+      statements: [
+        new iam.PolicyStatement({
+          actions: [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+          ],
+          resources: ['arn:aws:logs:*:*:*'],
+        })
+      ],
+    });
+
+    lambdaEdgeRole.attachInlinePolicy(lambdaEdgePolicy)
+
 
     // Lambda Function
     const urlRewriterFunction = new lambda.Function(this, 'UrlRewriterFunction', {
@@ -53,20 +70,7 @@ export class BlogStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_16_X,
       timeout: cdk.Duration.seconds(5)
     });
-    // Service role - IAM Policy attachment
-    urlRewriterFunction.role?.attachInlinePolicy(
-      new iam.Policy(this, 'UrlRewriterFunctionInlinePolicy', {
-        statements: [lambdaEdgePolicy],
-      }),
-    );
 
-
-    const urlRewriterFunctionVersion = new lambda.Version(this, 'UrlRewriterFunctionVersion', {
-      lambda: urlRewriterFunction
-    }
-    );
-    
-      
 
     // Cfn Output
     new cdk.CfnOutput(this, 'blogCloudfrontDistributionId', {
