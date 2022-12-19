@@ -15,13 +15,13 @@ export class BlogStack extends cdk.Stack {
     super(scope, id, props);
     
     // S3 bucket for AWS Instance Scheduler
-    const blogBucket = new s3.Bucket(this, 'blogBucket', {
+    const blogBucket = new s3.Bucket(this, 'blogS3Bucket', {
       bucketName: process.env.BUCKET_NAME
     });
 
     // ACM
     const arn : string = process.env.CERTIFICATE_ARN!;
-    const certificate = acm.Certificate.fromCertificateArn(this, 'Certificate', arn);
+    const certificate = acm.Certificate.fromCertificateArn(this, 'blogAcmCertificate', arn);
 
     // Cloudfront
     new cloudfront.Distribution(this, 'blogCFDistribution', {
@@ -52,7 +52,7 @@ export class BlogStack extends cdk.Stack {
       }),
     );
 
-    new cdk.CfnOutput(this, 'blogBucketput', {
+    new cdk.CfnOutput(this, 'blogS3BucketOutput', {
       value: blogBucket.bucketName,
       description: 'blog bucket',
       exportName: 'bucketname',
