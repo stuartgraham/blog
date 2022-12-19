@@ -8,7 +8,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: UA-123-45
+googleAnalytics: UA-149014652-2
 
 minify:
   disableXML: true
@@ -105,11 +105,11 @@ menu:
   main:
     - identifier: categories
       name: categories
-      url: /categories/
+      url: /categories/index.html
       weight: 10
     - identifier: tags
       name: tags
-      url: /tags/
+      url: /tags/index.html
       weight: 20
     # - identifier: example
     #   name: example.org
