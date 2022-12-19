@@ -6,11 +6,16 @@ export class BlogCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    // S3 bucket
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'BlogCdkQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    // ACM
+    
+    // Cloudfront
+    
+    // IAM Role for Lambda Edge
+
+    // Lambda
+
+
   }
 }
