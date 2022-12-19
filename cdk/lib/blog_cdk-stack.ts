@@ -51,10 +51,10 @@ export class BlogCdkStack extends cdk.Stack {
       }),
     );
 
-    new cdk.CfnOutput(this, 'bucketName', {
+    new cdk.CfnOutput(this, 'blogBucketput', {
       value: blogBucket.bucketName,
       description: 'blog bucket',
-      exportName: 'bucket_name',
+      exportName: 'bucketname',
     });
 
   }
