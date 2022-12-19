@@ -38,6 +38,8 @@ jobs:
           role-session-name: GitHubActions-${{ github.run_id }}
           aws-region: eu-west-1
 
+      - name: Change pwd
+        run: cd cdk/
       - name: Install dependencies
         run: yarn
       - name: Ensure Bootstrap Stack
