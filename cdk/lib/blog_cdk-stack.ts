@@ -13,7 +13,6 @@ import * as events from 'aws-cdk-lib/aws-events';
 export class BlogCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
-    // temp
     // S3 bucket for AWS Instance Scheduler
     const blogBucket = new s3.Bucket(this, 'blogBucket', {
       bucketName: process.env.BUCKET_NAME

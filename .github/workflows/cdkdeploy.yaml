@@ -23,6 +23,9 @@ jobs:
       BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
       CERTIFICATE_ARN : ${{ secrets.CERTIFICATE_ARN }}
     steps:
+      - name: check envs
+        run: echo ${{ secrets.BUCKET_NAME }}
+      
       - name: Verify account number presense
         env:
           AWS_ACCOUNT_NUMBER : ${{ secrets.AWS_ACCOUNT_NUMBER }}
