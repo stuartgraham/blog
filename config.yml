@@ -76,9 +76,9 @@ params:
     Title: "rstu.xyz"
     Content: A collection of ideas in cloud, self hosting and other
 
-  # analytics:
-  #   google:
-  #     SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      SiteVerificationTag: "G-W47RC2ZLJV"
 
 
   cover:
