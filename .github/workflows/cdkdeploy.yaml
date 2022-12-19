@@ -19,6 +19,8 @@ permissions:
 jobs:
   cdk_build:
     runs-on: ubuntu-22.04
+    env:
+      BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
     steps:
       - name: Verify account number presense
         env:
