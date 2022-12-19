@@ -21,11 +21,13 @@ export class BlogStack extends cdk.Stack {
 
     // ACM
     const arn : string = process.env.CERTIFICATE_ARN!;
-    const certificate = acm.Certificate.fromCertificateArn(this, 'blogAcmCertificate', arn);
+    const blogAcmCertificate = acm.Certificate.fromCertificateArn(this, 'blogAcmCertificate', arn);
 
     // Cloudfront
     new cloudfront.Distribution(this, 'blogCFDistribution', {
       defaultBehavior: { origin: new origins.S3Origin(blogBucket) },
+      domainNames: ['blog.rstu.xyz'],
+      certificate: blogAcmCertificate
     });
 
     // IAM Role for Lambda Edge
@@ -52,6 +54,8 @@ export class BlogStack extends cdk.Stack {
       }),
     );
 
+
+    // Cfn Output
     new cdk.CfnOutput(this, 'blogS3BucketOutput', {
       value: blogBucket.bucketName,
       description: 'blog bucket',
