@@ -21,11 +21,9 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
-      CERTIFICATE_ARN : ${{ secrets.CERTIFICATE_ARN }}
+      CERTIFICATE_ARN: ${{ secrets.CERTIFICATE_ARN }}
+      AWS_ACCOUNT_NUMBER: ${{ secrets.AWS_ACCOUNT_NUMBER }}
     steps:
-      - name: check envs
-        run: echo ${{ secrets.BUCKET_NAME }}
-      
       - name: Verify account number presense
         env:
           AWS_ACCOUNT_NUMBER : ${{ secrets.AWS_ACCOUNT_NUMBER }}
