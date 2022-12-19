@@ -54,7 +54,7 @@ export class BlogStack extends cdk.Stack {
       }),
     );
 
-
+    //
     // Cfn Output
     new cdk.CfnOutput(this, 'blogCloudfrontDistributionId', {
       value: blogCloudfrontDistro.distributionId,
