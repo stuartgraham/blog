@@ -51,7 +51,7 @@ export class BlogStack extends cdk.Stack {
       code: lambda.Code.fromAsset(path.join(__dirname, '../lambda/url-rewriter')),
       handler: 'index.handler',
       runtime: lambda.Runtime.NODEJS_16_X,
-      timeout: cdk.Duration.minutes(5)
+      timeout: cdk.Duration.seconds(5)
     });
     // Service role - IAM Policy attachment
     urlRewriterFunction.role?.attachInlinePolicy(
@@ -59,6 +59,14 @@ export class BlogStack extends cdk.Stack {
         statements: [lambdaEdgePolicy],
       }),
     );
+
+
+    const urlRewriterFunctionVersion = new lambda.Version(this, 'UrlRewriterFunctionVersion', {
+      lambda: urlRewriterFunction
+    }
+    );
+    
+      
 
     // Cfn Output
     new cdk.CfnOutput(this, 'blogCloudfrontDistributionId', {
