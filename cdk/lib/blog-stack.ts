@@ -24,7 +24,7 @@ export class BlogStack extends cdk.Stack {
     const blogAcmCertificate = acm.Certificate.fromCertificateArn(this, 'blogAcmCertificate', arn);
 
     // Cloudfront
-    new cloudfront.Distribution(this, 'blogCFDistribution', {
+    const blogCloudfrontDistro = new cloudfront.Distribution(this, 'blogCFDistribution', {
       defaultBehavior: { origin: new origins.S3Origin(blogBucket) },
       domainNames: ['blog.rstu.xyz'],
       certificate: blogAcmCertificate
@@ -56,10 +56,16 @@ export class BlogStack extends cdk.Stack {
 
 
     // Cfn Output
-    new cdk.CfnOutput(this, 'blogS3BucketOutput', {
-      value: blogBucket.bucketName,
-      description: 'blog bucket',
-      exportName: 'bucketname',
+    new cdk.CfnOutput(this, 'blogCloudfrontDistributionId', {
+      value: blogCloudfrontDistro.distributionId,
+      description: 'Distribution ID for blog.rstu.xyz',
+      exportName: 'DistributionID',
+    });
+
+    new cdk.CfnOutput(this, 'blogCloudfrontDomainName', {
+      value: blogCloudfrontDistro.domainName,
+      description: 'CF domain name for blog.rstu.xyz',
+      exportName: 'DomainName',
     });
 
   }
