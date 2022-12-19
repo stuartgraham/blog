@@ -1,4 +1,4 @@
-name: CDK Build Pipeline
+name: S3 sync job
 
 concurrency:
   group: ${{ github.head_ref || github.ref_name }} 
@@ -17,7 +17,7 @@ permissions:
   contents: read
 
 jobs:
-  cdk_build:
+  s3_sync :
     runs-on: ubuntu-22.04
     steps:
       - name: Verify account number presense
