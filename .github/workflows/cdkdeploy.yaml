@@ -43,10 +43,14 @@ jobs:
       - name: Change pwd
         run: cd cdk/
       - name: Install dependencies
+        working-directory: ./cdk
         run: yarn
       - name: Ensure Bootstrap Stack
+        working-directory: ./cdk
         run: yarn cdk bootstrap aws://${{ secrets.AWS_ACCOUNT_NUMBER }}/eu-west-1
       - name: Synth stack
+        working-directory: ./cdk
         run: yarn cdk synth
       - name: Deploy stack
+        working-directory: ./cdk
         run: yarn cdk deploy --all --require-approval never
