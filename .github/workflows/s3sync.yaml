@@ -1,0 +1,38 @@
+name: CDK Build Pipeline
+
+concurrency:
+  group: ${{ github.head_ref || github.ref_name }} 
+
+on:  
+  push:
+    tags-ignore:
+      - '*'
+    branches:
+      - 'main'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  cdk_build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Verify account number presense
+        env:
+          AWS_ACCOUNT_NUMBER : ${{ secrets.AWS_ACCOUNT_NUMBER }}
+        if: "${{ env.AWS_ACCOUNT_NUMBER!= '' }}"     
+        run: echo "This command is executed if AWS_ACCOUNT_NUMBER secret is populated"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_NUMBER }}:role/GithubOidcRole
+          role-session-name: GitHubActions-${{ github.run_id }}
+          aws-region: eu-west-1
+
