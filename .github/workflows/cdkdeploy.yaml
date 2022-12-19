@@ -40,14 +40,14 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_NUMBER }}:role/GithubOidcRole
           role-session-name: GitHubActions-${{ github.run_id }}
-          aws-region: eu-west-1
+          aws-region: us-east-1
 
       - name: Install dependencies
         working-directory: ./cdk
         run: yarn
       - name: Ensure Bootstrap Stack
         working-directory: ./cdk
-        run: yarn cdk bootstrap aws://${{ secrets.AWS_ACCOUNT_NUMBER }}/eu-west-1
+        run: yarn cdk bootstrap aws://${{ secrets.AWS_ACCOUNT_NUMBER }}/us-east-1
       - name: Synth stack
         working-directory: ./cdk
         run: yarn cdk synth
