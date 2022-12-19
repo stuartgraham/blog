@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+      CERTIFICATE_ARN : ${{ secrets.CERTIFICATE_ARN }}
     steps:
       - name: Verify account number presense
         env:
