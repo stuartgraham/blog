@@ -15,7 +15,7 @@ export class BlogCdkStack extends cdk.Stack {
     });
 
     // ACM
-    const arn = process.env.CERTIFICATE_ARN;
+    const arn : string = process.env.CERTIFICATE_ARN!;
     const certificate = acm.Certificate.fromCertificateArn(this, 'Certificate', arn);
 
     // Cloudfront
