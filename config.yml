@@ -15,7 +15,7 @@ minify:
   minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production
   title: rstu.xyz
   description: "rstu.xyz"
   keywords: [Blog]
@@ -76,6 +76,10 @@ params:
     Title: "rstu.xyz"
     Content: A collection of ideas in cloud, self hosting and other
 
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/"
+
   analytics:
     google:
       SiteVerificationTag: "G-W47RC2ZLJV"
@@ -103,18 +107,15 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories
+    - identifier: posts
+      name: Posts
+      url: /posts
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags
+    - identifier: search
+      name: Search
+      url: /search
       weight: 20
-    # - identifier: example
-    #   name: example.org
-    #   url: https://example.org
-    #   weight: 30
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
