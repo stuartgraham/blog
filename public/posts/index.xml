@@ -16,7 +16,7 @@
       <pubDate>Sun, 18 Dec 2022 12:30:03 +0000</pubDate>
       
       <guid>https://blog.rstu.xyz/posts/github-aws-oidc-cloudformation/</guid>
-      <description>Quickly integrating AWS and GitHub using OIDC</description>
+      <description>Quickly integrating AWS and GitHub using OIDC and CloudFormation</description>
     </item>
     
   </channel>

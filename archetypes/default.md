@@ -13,15 +13,14 @@ comments: false
 description: "Some description"
 summary: "Some summary"
 canonicalURL: "https://blog.rstu.xyz/"
-disableHLJS: true
-disableShare: false
 disableHLJS: false
+disableShare: false
 hideSummary: false
-searchHidden: true
-ShowReadingTime: true
+searchHidden: false
+ShowReadingTime: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
-ShowWordCount: true
+ShowWordCount: false
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
@@ -30,8 +29,4 @@ cover:
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
-editPost:
-    URL: "https://github.com/stuartgraham/blog/content"
-    Text: "Suggest edits"
-    appendFilePath: true 
 ---

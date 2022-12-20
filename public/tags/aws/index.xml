@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>oidc on rstu.xyz</title>
-    <link>https://blog.rstu.xyz/tags/oidc/</link>
-    <description>Recent content in oidc on rstu.xyz</description>
+    <title>aws on rstu.xyz</title>
+    <link>https://blog.rstu.xyz/tags/aws/</link>
+    <description>Recent content in aws on rstu.xyz</description>
     <image>
       <url>https://blog.rstu.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://blog.rstu.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 18 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/oidc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS/GitHub OIDC Cloudformation</title>
       <link>https://blog.rstu.xyz/posts/github-aws-oidc-cloudformation/</link>

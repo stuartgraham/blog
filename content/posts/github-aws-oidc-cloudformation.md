@@ -2,25 +2,24 @@
 title: "AWS/GitHub OIDC Cloudformation"
 date: 2022-12-18T12:30:03+00:00
 weight: 1
-tags: ["cloud", "oidc"]
+tags: ["cloud", "oidc", "aws", "iam", "github"]
 author: "Stuart Graham"
 showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Quickly integrating AWS and GitHub using OIDC"
-summary: "Quickly integrating AWS and GitHub using OIDC"
+description: "Quickly integrating AWS and GitHub using OIDC and CloudFormation"
+summary: "Quickly integrating AWS and GitHub using OIDC and CloudFormation"
 canonicalURL: "https://blog.rstu.xyz/"
-disableHLJS: true
-disableShare: false
 disableHLJS: false
+disableShare: false
 hideSummary: false
 searchHidden: false
-ShowReadingTime: true
+ShowReadingTime: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
-ShowWordCount: true
+ShowWordCount: false
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
@@ -29,10 +28,6 @@ cover:
     caption: "CloudFormation" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
-editPost:
-    URL: "https://github.com/stuartgraham/blog/content"
-    Text: "Suggest edits"
-    appendFilePath: true 
 ---
 
 # Best Practises
