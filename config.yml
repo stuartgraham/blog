@@ -56,34 +56,15 @@ params:
     icon: /apple-touch-icon.png
     iconHeight: 35
 
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
   # home-info mode
   homeInfoParams:
-    Title: "rstu.xyz"
+    Title: "blog.rstu.xyz"
     Content: A collection of ideas in cloud, self hosting and other
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
 
   analytics:
     google:
       SiteVerificationTag: "G-W47RC2ZLJV"
-
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -126,3 +107,9 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary

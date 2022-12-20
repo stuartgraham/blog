@@ -1,19 +1,18 @@
 ---
 title: "AWS/GitHub OIDC Cloudformation"
 date: 2022-12-18T12:30:03+00:00
-weight: 10
-aliases: ["/aws-github-oidc"]
+weight: 1
 tags: ["cloud", "oidc"]
 author: "Stuart Graham"
-# author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
 comments: false
 description: "Quickly integrating AWS and GitHub using OIDC"
+summary: "Quickly integrating AWS and GitHub using OIDC"
 canonicalURL: "https://blog.rstu.xyz/"
-disableHLJS: true # to disable highlightjs
+disableHLJS: true
 disableShare: false
 disableHLJS: false
 hideSummary: false

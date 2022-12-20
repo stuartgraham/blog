@@ -1,19 +1,19 @@
 ---
 title: "Some Post"
 date: 2022-12-01T12:30:03+00:00
-# weight: 1
+weight: 1
 # aliases: ["/first"]
 tags: ["all"]
 author: "Stuart Graham"
-# author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: true
 hidemeta: false
 comments: false
-description: "Descriptive text"
+description: "Some description"
+summary: "Some summary"
 canonicalURL: "https://blog.rstu.xyz/"
-disableHLJS: true # to disable highlightjs
+disableHLJS: true
 disableShare: false
 disableHLJS: false
 hideSummary: false
