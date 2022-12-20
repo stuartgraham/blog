@@ -16,7 +16,8 @@ export class BlogStack extends cdk.Stack {
     
     // S3 bucket for AWS Instance Scheduler
     const blogBucket = new s3.Bucket(this, 'blogS3Bucket', {
-      bucketName: process.env.BUCKET_NAME
+      bucketName: process.env.BUCKET_NAME,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL
     });
 
     // ACM
