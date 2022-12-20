@@ -38,9 +38,6 @@ export class BlogStack extends cdk.Stack {
     });
 
     // IAM Role for Lambda Edge
-
-
-    // Instance Role
     const lambdaEdgeRole = new iam.Role(this, 'LambdaEdgeRole', {
       assumedBy: new iam.CompositePrincipal(
         new iam.ServicePrincipal('edgelambda.amazonaws.com'),
