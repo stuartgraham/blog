@@ -5,7 +5,7 @@ weight: 1
 # aliases: ["/first"]
 tags: ["all"]
 author: "Stuart Graham"
-showToc: true
+showToc: false
 TocOpen: false
 draft: false
 hidemeta: false
