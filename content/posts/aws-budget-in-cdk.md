@@ -31,7 +31,7 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-# Budgets
+# Automate budget visibility when using cloud
 A good starting position with any new AWS account is to decide a budget for spend and to get notifications in place as you meet, approach or exceed this threshold. AWS provide some predictive analysis of you spend patterns too and can catch early problems before they spiral into bill shock and you are contacting their support teams with the begging bowl. 
 
 Here is a snippet to quickly set up a $100 budget in CDK. 

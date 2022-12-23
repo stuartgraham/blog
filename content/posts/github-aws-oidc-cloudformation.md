@@ -4,7 +4,7 @@ date: 2022-12-18T12:30:03+00:00
 weight: 1
 tags: ["cloud", "oidc", "aws", "iam", "github"]
 author: "Stuart Graham"
-showToc: true
+showToc: false
 TocOpen: false
 draft: false
 hidemeta: false
@@ -30,7 +30,7 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-# Best Practises
+# Try to use short lived credentials when using clouds
 GitHub's [documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services) outlines the recommendation to use OIDC functionality between various cloud providers, this allows for the use of short lived credentials as opposed to statically stored secrets which need to be manually created and are prone to proliferation.
 
 When using Github repos to define parts of your AWS configuration, rather than use the manual method, a better approach is to use a CloudFormation template. A CloudFormation template can be used to create a CloudFormation stack in your AWS account to quickly form the OIDC connection between the accounts IAM identity provider feature and a specific repo, allowing for secure exchange of credentials between the pair of entities.
@@ -38,7 +38,7 @@ When using Github repos to define parts of your AWS configuration, rather than u
 Pay attention to, and edit, `ManagedPolicyArns` section where it is recommended to scope this to the least privilege needed.
 
 
-## CloudFormation Template
+## Cloudformation template
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -105,7 +105,7 @@ Resources:
 
 ```
 
-## GitHub Actions
+## Adding to your automated workflows using Github Actions
 After the CloudFormation stack is installed you can now use the `aws-actions/configure-aws-credentials` action to transparently call for short lived credentials to be used in your workflows using the many AWS APIs, or perhaps deploy CDK deployments straight from GitHub.
 
 ```
