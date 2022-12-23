@@ -9,7 +9,16 @@
       <link>https://blog.rstu.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 18 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>all</title>
+      <link>https://blog.rstu.xyz/tags/all/</link>
+      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
+      
+      <guid>https://blog.rstu.xyz/tags/all/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>aws</title>
       <link>https://blog.rstu.xyz/tags/aws/</link>

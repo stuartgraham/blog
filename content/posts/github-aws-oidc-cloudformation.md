@@ -1,5 +1,5 @@
 ---
-title: "AWS/GitHub OIDC Cloudformation"
+title: "AWS/GitHub OIDC CloudFormation"
 date: 2022-12-18T12:30:03+00:00
 weight: 1
 tags: ["cloud", "oidc", "aws", "iam", "github"]

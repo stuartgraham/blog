@@ -11,7 +11,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 18 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS/GitHub OIDC Cloudformation</title>
+      <title>AWS/GitHub OIDC CloudFormation</title>
       <link>https://blog.rstu.xyz/posts/github-aws-oidc-cloudformation/</link>
       <pubDate>Sun, 18 Dec 2022 12:30:03 +0000</pubDate>
       

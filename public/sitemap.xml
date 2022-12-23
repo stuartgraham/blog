@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.rstu.xyz/posts/aws-budget-in-cdk/</loc>
+    <lastmod>2022-12-23T12:30:03+00:00</lastmod>
+  </url><url>
     <loc>https://blog.rstu.xyz/posts/github-aws-oidc-cloudformation/</loc>
     <lastmod>2022-12-18T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/tags/all/</loc>
+    <lastmod>2022-12-23T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/posts/</loc>
+    <lastmod>2022-12-23T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/</loc>
+    <lastmod>2022-12-23T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/tags/</loc>
+    <lastmod>2022-12-23T12:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.rstu.xyz/tags/aws/</loc>
     <lastmod>2022-12-18T12:30:03+00:00</lastmod>
@@ -18,15 +33,6 @@
     <lastmod>2022-12-18T12:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.rstu.xyz/tags/oidc/</loc>
-    <lastmod>2022-12-18T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/posts/</loc>
-    <lastmod>2022-12-18T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/</loc>
-    <lastmod>2022-12-18T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/tags/</loc>
     <lastmod>2022-12-18T12:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.rstu.xyz/categories/</loc>
