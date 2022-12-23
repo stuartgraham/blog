@@ -11,18 +11,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 23 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>all</title>
-      <link>https://blog.rstu.xyz/tags/all/</link>
-      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
-      
-      <guid>https://blog.rstu.xyz/tags/all/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>aws</title>
       <link>https://blog.rstu.xyz/tags/aws/</link>
-      <pubDate>Sun, 18 Dec 2022 12:30:03 +0000</pubDate>
+      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
       
       <guid>https://blog.rstu.xyz/tags/aws/</guid>
       <description></description>
@@ -31,9 +22,18 @@
     <item>
       <title>cloud</title>
       <link>https://blog.rstu.xyz/tags/cloud/</link>
-      <pubDate>Sun, 18 Dec 2022 12:30:03 +0000</pubDate>
+      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
       
       <guid>https://blog.rstu.xyz/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>finops</title>
+      <link>https://blog.rstu.xyz/tags/finops/</link>
+      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
+      
+      <guid>https://blog.rstu.xyz/tags/finops/</guid>
       <description></description>
     </item>
     
