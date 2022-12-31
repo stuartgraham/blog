@@ -24,7 +24,7 @@ jobs:
       CERTIFICATE_ARN: ${{ secrets.CERTIFICATE_ARN }}
       AWS_ACCOUNT_NUMBER: ${{ secrets.AWS_ACCOUNT_NUMBER }}
     steps:
-      - name: Verify account number presense
+      - name: Verify account number presence
         env:
           AWS_ACCOUNT_NUMBER : ${{ secrets.AWS_ACCOUNT_NUMBER }}
         if: "${{ env.AWS_ACCOUNT_NUMBER!= '' }}"     
