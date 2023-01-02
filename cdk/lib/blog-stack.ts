@@ -7,6 +7,7 @@ import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as logs from 'aws-cdk-lib/aws-logs';
 import * as events from 'aws-cdk-lib/aws-events';
 
 
@@ -67,7 +68,8 @@ export class BlogStack extends cdk.Stack {
       handler: 'index.handler',
       runtime: lambda.Runtime.NODEJS_16_X,
       timeout: cdk.Duration.seconds(5),
-      role: lambdaEdgeRole
+      role: lambdaEdgeRole,
+      logRetention: logs.RetentionDays.ONE_WEEK,
     });
 
 
