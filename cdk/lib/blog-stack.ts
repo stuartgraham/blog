@@ -26,8 +26,8 @@ export class BlogStack extends cdk.Stack {
     const blogAcmCertificate = acm.Certificate.fromCertificateArn(this, 'blogAcmCertificate', arn);
 
     // Origin Access Identity
-    const blogoriginAccessIdentity = new cloudfront.OriginAccessIdentity(this, 'blogOriginAccessIdentity');
-    blogBucket.grantRead(blogoriginAccessIdentity);
+    const blogOriginAccessIdentity = new cloudfront.OriginAccessIdentity(this, 'blogOriginAccessIdentity');
+    blogBucket.grantRead(blogOriginAccessIdentity);
 
 
     // Cloudfront
