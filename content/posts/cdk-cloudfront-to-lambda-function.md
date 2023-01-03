@@ -40,7 +40,6 @@ One problem you will run again is that you may want to run these with an easy to
 You can build out a Lambda function in CDK in a standard way, in this example I am building a Python based function using some self created layers for Jinja2 and Requests.
 
 ```
-// Lambda Function - Web Interface
 const WebInterfaceFunction = new lambda.Function(this, 'WebInterfaceFunction', {
     code: lambda.Code.fromAsset(path.join(__dirname, '../lambda/web-interface')),
     handler: 'main.handler',
@@ -59,7 +58,6 @@ const WebInterfaceFunction = new lambda.Function(this, 'WebInterfaceFunction', {
 Now add the Function URL to the function, in this case I am running with no auth, meaning anyone can call for the function. Function URLs also support IAM SigV4 authentication if you have this requirement.
 
 ```
-// Function URL right to SSM Parameter in friendly for Cloudfront manner
 const WebInterfaceFunctionUrl = WebInterfaceFunction.addFunctionUrl({
     authType: lambda.FunctionUrlAuthType.NONE,
 });
@@ -82,7 +80,6 @@ Now we have a function with an URL hosted in eu-west-1, lets give it a friendly 
 
 In this example I have manually created the ACM certificate and referencing the ARN as an environment variable, you can use CDK to do this automatically at build time. 
 ```
-// ACM
 const arn : string = process.env.CERTIFICATE_ARN!;
 const webAppAcmCertificate = acm.Certificate.fromCertificateArn(this, 'WebAppAcmCertificate', arn);
 
@@ -90,7 +87,6 @@ const webAppAcmCertificate = acm.Certificate.fromCertificateArn(this, 'WebAppAcm
 
 The we grab the SSM parameter from EU-WEST-1 using the same library as above.
 ```
-// SSM Lookup
 const originUrl = ssmcross.StringParameter.fromStringParameterName(this, "OriginUrl", 
     "eu-west-1", 
     "/webapp/functionurlhost");
@@ -98,7 +94,6 @@ const originUrl = ssmcross.StringParameter.fromStringParameterName(this, "Origin
 Lastly we build the Cloudfront distribution, target the Function URL and disabled caching (my function is all dynamic content).
 
 ```
-// Cloudfront
 const busCloudfrontDistro = new cloudfront.Distribution(this, 'busCFDistribution', {
     defaultBehavior: { 
     origin: new origins.HttpOrigin(originUrl.stringValue),
