@@ -11,12 +11,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/cloudfront/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cloudfront and Lambda Function URLs</title>
+      <title>CloudFront and Lambda Function URLs</title>
       <link>https://blog.rstu.xyz/posts/cdk-cloudfront-to-lambda-function/</link>
       <pubDate>Tue, 03 Jan 2023 12:30:03 +0000</pubDate>
       
       <guid>https://blog.rstu.xyz/posts/cdk-cloudfront-to-lambda-function/</guid>
-      <description>Put Cloudfront infront of Lambda Function URLs using CDK</description>
+      <description>Put CloudFront infront of Lambda Function URLs using CDK</description>
     </item>
     
   </channel>
