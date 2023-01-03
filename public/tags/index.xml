@@ -9,22 +9,49 @@
       <link>https://blog.rstu.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Dec 2022 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 12:30:03 +0000</lastBuildDate><atom:link href="https://blog.rstu.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>aws</title>
       <link>https://blog.rstu.xyz/tags/aws/</link>
-      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
+      <pubDate>Tue, 03 Jan 2023 12:30:03 +0000</pubDate>
       
       <guid>https://blog.rstu.xyz/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>cdk</title>
+      <link>https://blog.rstu.xyz/tags/cdk/</link>
+      <pubDate>Tue, 03 Jan 2023 12:30:03 +0000</pubDate>
+      
+      <guid>https://blog.rstu.xyz/tags/cdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cloud</title>
       <link>https://blog.rstu.xyz/tags/cloud/</link>
-      <pubDate>Fri, 23 Dec 2022 12:30:03 +0000</pubDate>
+      <pubDate>Tue, 03 Jan 2023 12:30:03 +0000</pubDate>
       
       <guid>https://blog.rstu.xyz/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudfront</title>
+      <link>https://blog.rstu.xyz/tags/cloudfront/</link>
+      <pubDate>Tue, 03 Jan 2023 12:30:03 +0000</pubDate>
+      
+      <guid>https://blog.rstu.xyz/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>https://blog.rstu.xyz/tags/lambda/</link>
+      <pubDate>Tue, 03 Jan 2023 12:30:03 +0000</pubDate>
+      
+      <guid>https://blog.rstu.xyz/tags/lambda/</guid>
       <description></description>
     </item>
     
