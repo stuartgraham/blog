@@ -9,11 +9,7 @@ exports.handler = (event, context, callback) => {
 
 
     // Verifies if url has trailing '/' adds if not
-    var lastChar = oldUrl.substr(-1);
-    if (lastChar != '/') {
-        oldUrl = oldUrl + '/';  
-    }
-
+    oldUrl = oldUrl.replace(/\/?$/, '/');
 
     // Match any '/' that occurs at the end of a URI. Replace it with a default index
     var newUrl = oldUrl.replace(/\/$/, '\/index.html');
@@ -27,5 +23,4 @@ exports.handler = (event, context, callback) => {
     
     // Return to CloudFront
     return callback(null, request);
-
 };
