@@ -74,13 +74,13 @@ export class BlogStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'blogCloudfrontDistributionId', {
       value: blogCloudfrontDistro.distributionId,
       description: 'Distribution ID for blog.rstu.xyz',
-      exportName: 'DistributionID',
+      exportName: 'BlogDistributionID',
     });
 
     new cdk.CfnOutput(this, 'blogCloudfrontDomainName', {
       value: blogCloudfrontDistro.domainName,
       description: 'CF domain name for blog.rstu.xyz',
-      exportName: 'DomainName',
+      exportName: 'BlogDomainName',
     });
 
   }
