@@ -62,6 +62,7 @@ export class BlogStack extends cdk.Stack {
             eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
           }
         ],
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS
       },
       errorResponses: [error403, error404, error503],
       domainNames: ['blog.rstu.xyz'],
