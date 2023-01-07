@@ -1,6 +1,7 @@
 function handler(event) {
     var request = event.request;
-    console.log(request);
+    var uri = request.uri;
+    console.log('Received:' + request.uri);
 
 
     // Check whether the URI is missing a file name.
@@ -11,6 +12,7 @@ function handler(event) {
     else if (!uri.includes('.')) {
         request.uri += '/index.html';
     }
+    console.log('Sent:' + request.uri);
 
     return request;
 }
