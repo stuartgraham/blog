@@ -11,7 +11,7 @@ export class BlogStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     
-    // S3 bucket for AWS Instance Scheduler
+    // S3 bucket for blog
     const blogBucket = new s3.Bucket(this, 'blogS3Bucket', {
       bucketName: process.env.BUCKET_NAME,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL
