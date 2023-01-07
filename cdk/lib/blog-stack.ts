@@ -36,6 +36,13 @@ export class BlogStack extends cdk.Stack {
       }),
     });
 
+    const error404: cloudfront.ErrorResponse = {
+      httpStatus: 404,
+      responseHttpStatus: 404,
+      responsePagePath: '/404.html',
+      ttl: cdk.Duration.minutes(30),
+    }
+
 
     // Cloudfront
     const blogCloudfrontDistro = new cloudfront.Distribution(this, 'blogCFDistribution', {
@@ -48,6 +55,7 @@ export class BlogStack extends cdk.Stack {
           }
         ],
       },
+      errorResponses: [error404],
       domainNames: ['blog.rstu.xyz'],
       certificate: blogAcmCertificate,
       defaultRootObject: 'index.html',
