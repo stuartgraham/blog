@@ -32,13 +32,25 @@ export class BlogStack extends cdk.Stack {
       }),
     });
 
+    // Cloudfront errors
+    const error403: cloudfront.ErrorResponse = {
+      httpStatus: 403,
+      responseHttpStatus: 404,
+      responsePagePath: '/404.html',
+      ttl: cdk.Duration.minutes(30),
+    }
     const error404: cloudfront.ErrorResponse = {
       httpStatus: 404,
       responseHttpStatus: 404,
       responsePagePath: '/404.html',
       ttl: cdk.Duration.minutes(30),
     }
-
+    const error503: cloudfront.ErrorResponse = {
+      httpStatus: 503,
+      responseHttpStatus: 404,
+      responsePagePath: '/404.html',
+      ttl: cdk.Duration.minutes(30),
+    }
 
     // Cloudfront
     const blogCloudfrontDistro = new cloudfront.Distribution(this, 'blogCFDistribution', {
@@ -51,7 +63,7 @@ export class BlogStack extends cdk.Stack {
           }
         ],
       },
-      errorResponses: [error404],
+      errorResponses: [error403, error404, error503],
       domainNames: ['blog.rstu.xyz'],
       certificate: blogAcmCertificate,
       defaultRootObject: 'index.html',
