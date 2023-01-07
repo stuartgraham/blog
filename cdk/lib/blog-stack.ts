@@ -29,10 +29,25 @@ export class BlogStack extends cdk.Stack {
     const blogOriginAccessIdentity = new cloudfront.OriginAccessIdentity(this, 'blogOriginAccessIdentity');
     blogBucket.grantRead(blogOriginAccessIdentity);
 
+    // Cloudfront Function
+    const urlRewriterCfFunction = new cloudfront.Function(this, "UrlRewriterCfFunction", {
+      code: cloudfront.FunctionCode.fromFile({
+        filePath: (path.join(__dirname, '../cloudfront-function/url-rewriter/main.js'))
+      }),
+    });
+
 
     // Cloudfront
     const blogCloudfrontDistro = new cloudfront.Distribution(this, 'blogCFDistribution', {
-      defaultBehavior: { origin: new origins.S3Origin(blogBucket) },
+      defaultBehavior: { 
+        origin: new origins.S3Origin(blogBucket),
+        functionAssociations: [
+          {
+            function: urlRewriterCfFunction,
+            eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+          }
+        ],
+      },
       domainNames: ['blog.rstu.xyz'],
       certificate: blogAcmCertificate,
       defaultRootObject: 'index.html',
