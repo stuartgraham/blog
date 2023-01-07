@@ -1,8 +1,5 @@
 function handler(event) {
-    var request = event.request;
     console.log(request);
-    var uri = request.uri;
-    console.log(request.uri);
 
     // Check whether the URI is missing a file name.
     if (uri.endsWith('/')) {
