@@ -7,13 +7,29 @@ exports.handler = (event, context, callback) => {
     // Extract the URI from the request
     var oldUrl = request.uri;
 
-
+    // If URL is referencing valid file extension then continue
+    if (oldUrl.endsWith('.xml') ||
+    oldUrl.endsWith('.css') ||
+    oldUrl.endsWith('.js') || 
+    oldUrl.endsWith('.html') ||
+    oldUrl.endsWith('.png') ||
+    oldUrl.endsWith('.jpg') ||
+    oldUrl.endsWith('.jpeg') ||
+    oldUrl.endsWith('.txt') ||
+    oldUrl.endsWith('.json') ||
+    oldUrl.endsWith('.ico') ||
+    oldUrl.endsWith('.gif')
+    ) {
+        console.log('Valid file')
+    } else {
+    // Else wrangle URL to reference index.html
     // Verifies if url has trailing '/' adds if not
     oldUrl = oldUrl.replace(/\/?$/, '/');
 
     // Match any '/' that occurs at the end of a URI. Replace it with a default index
     var newUrl = oldUrl.replace(/\/$/, '\/index.html');
-    
+    }
+
     // Log the URI as received by CloudFront and the new URI to be used to fetch from origin
     console.log("Old URI: " + oldUrl);
     console.log("New URI: " + newUrl);
