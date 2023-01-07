@@ -67,6 +67,7 @@ export class BlogStack extends cdk.Stack {
       domainNames: ['blog.rstu.xyz'],
       certificate: blogAcmCertificate,
       defaultRootObject: 'index.html',
+      comment: 'blog.rstu.xyz'
     });
 
     // Cfn Output
