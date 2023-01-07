@@ -61,41 +61,6 @@ export class BlogStack extends cdk.Stack {
       defaultRootObject: 'index.html',
     });
 
-    // // IAM Role for Lambda Edge
-    // const lambdaEdgeRole = new iam.Role(this, 'LambdaEdgeRole', {
-    //   assumedBy: new iam.CompositePrincipal(
-    //     new iam.ServicePrincipal('edgelambda.amazonaws.com'),
-    //     new iam.ServicePrincipal('lambda.amazonaws.com')
-    //     )
-    // });
-
-    // const lambdaEdgePolicy = new iam.Policy(this, 'lambdaEdgePolicy', {
-    //   statements: [
-    //     new iam.PolicyStatement({
-    //       actions: [
-    //         "logs:CreateLogGroup",
-    //         "logs:CreateLogStream",
-    //         "logs:PutLogEvents",
-    //       ],
-    //       resources: ['arn:aws:logs:*:*:*'],
-    //     })
-    //   ],
-    // });
-
-    // lambdaEdgeRole.attachInlinePolicy(lambdaEdgePolicy)
-
-
-    // // Lambda Function
-    // const urlRewriterFunction = new lambda.Function(this, 'UrlRewriterFunction', {
-    //   code: lambda.Code.fromAsset(path.join(__dirname, '../lambda/url-rewriter')),
-    //   handler: 'index.handler',
-    //   runtime: lambda.Runtime.NODEJS_16_X,
-    //   timeout: cdk.Duration.seconds(5),
-    //   role: lambdaEdgeRole,
-    //   logRetention: logs.RetentionDays.ONE_WEEK,
-    // });
-
-
     // Cfn Output
     new cdk.CfnOutput(this, 'blogCloudfrontDistributionId', {
       value: blogCloudfrontDistro.distributionId,
