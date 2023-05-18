@@ -37,6 +37,7 @@ When using Github repos to define parts of your AWS configuration, rather than u
 
 Pay attention to, and edit, `ManagedPolicyArns` section where it is recommended to scope this to the least privilege needed.
 
+I'd also recommend reading through [this](https://www.rezonate.io/blog/github-misconfigurations-put-gcp-aws-in-account-takeover-risk/) post from Rezonate and understand the risks with misconfiguation of this role.
 
 ## Cloudformation template
 
@@ -93,7 +94,7 @@ Resources:
           Condition:
             StringLike:
               token.actions.githubusercontent.com:sub: !Sub
-                - repo:${RepoOwner}/${RepoName}*:*
+                - repo:${RepoOwner}/${RepoName}:*
                 - RepoOwner: !Ref GitHubOwner
                   RepoName: !Ref GitHubRepo
 
