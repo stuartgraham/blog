@@ -111,7 +111,7 @@ After the CloudFormation stack is installed you can now use the `aws-actions/con
 
 ```
 - name: Configure AWS Credentials
-uses: aws-actions/configure-aws-credentials@v1-node16
+uses: aws-actions/configure-aws-credentials@v2
 with:
     role-to-assume: arn:aws:iam::112233445566:role/GithubOidcRole
     role-session-name: GitHubActions-${{ github.run_id }}
