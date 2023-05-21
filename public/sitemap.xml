@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.rstu.xyz/posts/test/</loc>
-    <lastmod>2023-05-15T12:30:03+00:00</lastmod>
-  </url><url>
     <loc>https://blog.rstu.xyz/posts/cdk-cloudfront-to-lambda-function/</loc>
     <lastmod>2023-01-03T12:30:03+00:00</lastmod>
   </url><url>
@@ -13,18 +10,6 @@
   </url><url>
     <loc>https://blog.rstu.xyz/posts/github-aws-oidc-cloudformation/</loc>
     <lastmod>2022-12-18T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/posts/</loc>
-    <lastmod>2023-05-15T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/</loc>
-    <lastmod>2023-05-15T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/tags/</loc>
-    <lastmod>2023-05-15T12:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.rstu.xyz/tags/test/</loc>
-    <lastmod>2023-05-15T12:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.rstu.xyz/tags/aws/</loc>
     <lastmod>2023-01-03T12:30:03+00:00</lastmod>
@@ -39,6 +24,15 @@
     <lastmod>2023-01-03T12:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.rstu.xyz/tags/lambda/</loc>
+    <lastmod>2023-01-03T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/posts/</loc>
+    <lastmod>2023-01-03T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/</loc>
+    <lastmod>2023-01-03T12:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rstu.xyz/tags/</loc>
     <lastmod>2023-01-03T12:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.rstu.xyz/tags/finops/</loc>
