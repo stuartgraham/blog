@@ -8,7 +8,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-# googleAnalytics: UA-149014652-2
+googleAnalytics: UA-149014652-2
 
 minify:
   disableXML: true
@@ -53,7 +53,7 @@ params:
 
   label:
     text: "Home"
-    icon: /apple-touch-icon.png
+    icon: static/apple-touch-icon.png
     iconHeight: 35
 
   # home-info mode
@@ -62,9 +62,9 @@ params:
     Content: A collection of ideas in cloud, self hosting and other
 
 
-  # analytics:
-  #   google:
-  #     SiteVerificationTag: "G-W47RC2ZLJV"
+  analytics:
+    google:
+      SiteVerificationTag: "G-W47RC2ZLJV"
 
   cover:
     hidden: true # hide everywhere but not in structured data
